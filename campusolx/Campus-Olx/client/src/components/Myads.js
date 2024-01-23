@@ -7,7 +7,7 @@ function Myads() {
     const [adsDetails, setAdsDetails] = useState(null);
     const [soldAdds, setSoldAdds] = useState([]);
     const [bought, setBought] = useState([]);
-
+    const api = process.env.REACT_APP_API;
     useEffect(() => {
       const getmyadds = async () => {
 
@@ -16,7 +16,7 @@ function Myads() {
           (choice === "ads") ? 
           
             (                
-                await fetch('https://campus-olx.onrender.com/adds/myads',{
+                await fetch( api +  'adds/myads',{
                 method: "GET",
                 mode: "cors",
                 credentials: "include",
@@ -30,7 +30,7 @@ function Myads() {
 
             ) : ( 
 
-                await fetch('https://campus-olx.onrender.com/adds/myads/favourite',{
+                await fetch(api + 'adds/myads/favourite',{
                 method: "GET",
                 mode: "cors",
                 credentials: "include",
