@@ -36,7 +36,7 @@ function Header() {
     }
     const google = () => {
         // window.open("auth/google", "_self");
-        window.open(api + "/auth/google", "_self");
+        window.open(api + "auth/google", "_self");
     };
     return (
         <Container>
